@@ -186,7 +186,7 @@ void&#160;</td><td class="memItemRight"><b>unregister_func</b> ()</td></tr>
 <tr class="memitem:af2dc28a56128ca6f22a8c78bdcb829e5" id="r_af2dc28a56128ca6f22a8c78bdcb829e5"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#af2dc28a56128ca6f22a8c78bdcb829e5">with_realloc</a> (void *n, size_t s)</td></tr>
 <tr class="memdesc:af2dc28a56128ca6f22a8c78bdcb829e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes a memory and marks it, you should free only with with_free.  <br /></td></tr>
 <tr class="memitem:a174bb81071825527d4af97375f955e04" id="r_a174bb81071825527d4af97375f955e04"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a174bb81071825527d4af97375f955e04">with_free</a> (void *n)</td></tr>
-<tr class="memdesc:a174bb81071825527d4af97375f955e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a memory, zeros it, and marks it, you should free only with with_free.  <br /></td></tr>
+<tr class="memdesc:a174bb81071825527d4af97375f955e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees memory, double frees are alowed<br /></td></tr>
 <tr class="memitem:a43a807fc3ae54084706833249ff54c10" id="r_a43a807fc3ae54084706833249ff54c10"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#a43a807fc3ae54084706833249ff54c10">receive</a> (void *n)</td></tr>
 <tr class="memdesc:a43a807fc3ae54084706833249ff54c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">removes internal tracking of the pointer. You must handle it yourself after this point.  <br /></td></tr>
 <tr class="memitem:ad159d7bca9e6891700b1af67a901d7c6" id="r_ad159d7bca9e6891700b1af67a901d7c6"><td class="memItemLeft">void *&#160;</td><td class="memItemRight"><a class="el" href="#ad159d7bca9e6891700b1af67a901d7c6">mark</a> (void *data, size_t x)</td></tr>
@@ -700,11 +700,10 @@ Code Example</h3>
 <p>Allocates a memory, zeros it, and marks it, you should free only with with_free. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>size_t, size of the memory requested. </td></tr>
+    <tr><td class="paramname">n</td><td>void *, Pointer to free </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void *, returns a pointer to the requested memory with requested size. </dd></dl>
 
 </div>
 </div>
