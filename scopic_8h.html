@@ -617,7 +617,7 @@ Code Example</h3>
 <p>removes internal tracking of the pointer. You must handle it yourself after this point. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>void *, Pointer to free. </td></tr>
+    <tr><td class="paramname">n</td><td>void *, Pointer to recieve. </td></tr>
   </table>
   </dd>
 </dl>
@@ -697,7 +697,7 @@ Code Example</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Allocates a memory, zeros it, and marks it, you should free only with with_free. </p>
+<p>Frees memory, double frees are alowed </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>void *, Pointer to free </td></tr>
